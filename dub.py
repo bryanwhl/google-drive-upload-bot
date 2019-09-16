@@ -44,9 +44,7 @@ def getMessage():
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
     bot.reply_to(message, 'Welcome!')
-    file1 = drive.CreateFile({'title': 'Hello.txt'})
-    file1.SetContentString('Hello')
-    file1.Upload() # Files.insert()
+    
 
 @bot.message_handler(content_types=['photo'])
 def photo(message):
@@ -67,3 +65,4 @@ def photo(message):
     file5.Upload() # Upload the file.
     os.remove(file_name)
     bot.reply_to(message, 'Photo Uploaded.')
+
