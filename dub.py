@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 gauth = GoogleAuth()
 # Try to load saved client credentials
-gauth.LoadCredentialsFile("/home/sbntech/dubproject/mycreds.txt")
+gauth.LoadCredentialsFile("mycreds.txt")
 if gauth.credentials is None:
     # Authenticate if they're not there
     gauth.LocalWebserverAuth()
@@ -26,7 +26,7 @@ else:
     # Initialize the saved creds
     gauth.Authorize()
 # Save the current credentials to a file
-gauth.SaveCredentialsFile("/home/sbntech/dubproject/mycreds.txt")
+gauth.SaveCredentialsFile("mycreds.txt")
 
 drive = GoogleDrive(gauth)
 
