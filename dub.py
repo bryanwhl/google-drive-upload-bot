@@ -33,7 +33,7 @@ drive = GoogleDrive(gauth)
 bot_token = '921319853:AAGRhh_okupip4_qX2kC8zsu2PVfwN-VM9Y'
 bot = telebot.TeleBot(token=bot_token, threaded=False)
 bot.remove_webhook()
-bot.set_webhook(url='https://dubproject.pythonanywhere.com/' + bot_token)
+bot.set_webhook(url='https://dubproject.herokuapp.com/' + bot_token)
 
 @app.route('/' + bot_token, methods=['GET'])
 def getMessage():
