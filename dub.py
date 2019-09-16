@@ -31,7 +31,7 @@ gauth.SaveCredentialsFile("mycreds.txt")
 drive = GoogleDrive(gauth)
 
 bot_token = '921319853:AAGRhh_okupip4_qX2kC8zsu2PVfwN-VM9Y'
-bot = telebot.TeleBot(token=bot_token, threaded = False)
+bot = telebot.TeleBot(token=bot_token, threaded = )
 bot.remove_webhook()
 bot.set_webhook(url='https://bryanwhl.pythonanywhere.com/' + bot_token)
 
@@ -66,3 +66,5 @@ def photo(message):
     os.remove(file_name)
     bot.reply_to(message, 'Photo Uploaded.')
 
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
