@@ -35,7 +35,7 @@ bot = telebot.TeleBot(token=bot_token, threaded=False)
 bot.remove_webhook()
 bot.set_webhook(url='https://dubproject.pythonanywhere.com/' + bot_token)
 
-@app.route('/' + bot_token, methods=['POST'])
+@app.route('/' + bot_token, methods=['GET'])
 def getMessage():
     bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
     return "!", 200
