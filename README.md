@@ -16,7 +16,7 @@ Everyday at 0000hrs, the script generate_new_file_id.py is scheduled to run auto
 ## Libraries Used
 This project is created using the following libraries:
 
-- Pydrive
+- PyDrive
 https://pythonhosted.org/PyDrive/
 
 - PyTelegramBotAPI
